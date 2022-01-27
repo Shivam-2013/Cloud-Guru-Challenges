@@ -5,29 +5,29 @@ AWS Lambda doesn't come with all the modules in python. Hence we need to include
 I have broken the implementation in steps.
       . 
 In my case, I require Pandas, Numpy module to run my code. My lambda function is build on python 3.8 hence all the dependecies will be adjusted accordingly. 
-Create an EC2 instance(free tier only). Download the dependencies Pandas, Numpy. For Pandas to run on Lambda, an additional support of Pytz library is also required.
+Create an EC2 instance(free tier only). _Download the dependencies Pandas, Numpy. For Pandas to run on Lambda, an additional support of Pytz library is also required_.
 
-Version
+**Version**
 * https://pypi.org/project/numpy/#files
 * https://pypi.org/project/pandas/#files
 * https://pypi.org/project/pytz/#files
 
 ## STEP 1 - To get zip file with dependencies 
-        ### Download
-        sudo wget `http url to the version which is to be downloaded`
+### Download
+sudo wget `http url to the version which is to be downloaded`
 
-        ### Create a folder with the name python.
-        sudo mkdir `python`
+### Create a folder with the name python.
+sudo mkdir `python`
 
-        ### Unzip the downloaded module in new folder python
-        sudo unzip `<filename>` -d `<path to python folder>`
+### Unzip the downloaded module in new folder python
+sudo unzip `<filename>` -d `<path to python folder>`
 
-        ### Zip the python folder
-        sudo zip -r `python.zip` `python`
+### Zip the python folder
+sudo zip -r `python.zip` `python`
 
-        ### Copy the zip folder to S3 bucket
-        aws s3 cp python.zip s3://bucketname
-        or download the zip folder and upload the file in S3
+### Copy the zip folder to S3 bucket
+aws s3 cp python.zip s3://bucketname
+or download the zip folder and upload the file in S3
 
 ## STEP 2 - Create a layer in Lambda function
 Create a layer based on the S3 bucket
