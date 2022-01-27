@@ -5,7 +5,7 @@ AWS Lambda doesn't come with all the modules in python. Hence we need to include
 I have broken the implementation in steps.
       . 
 In my case, I require Pandas, Numpy module to run my code. My lambda function is build on python 3.8 hence all the dependecies will be adjusted accordingly. 
-Create an EC2 instance(free tier only). _Download the dependencies Pandas, Numpy. For Pandas to run on Lambda, an additional support of Pytz library is also required_.
+Create an EC2 instance(free tier only). Download the dependencies Pandas, Numpy. _For Pandas to run on Lambda, an additional support of Pytz library is also required._
 
 **Version**
 * https://pypi.org/project/numpy/#files
