@@ -13,7 +13,8 @@ In my case, I require Pandas, Numpy module to run my code. My lambda function is
 
 ## STEP 1 - To get zip file with dependencies 
 
-### Create an EC2 instance within free tier only
+### Create an EC2 instance 
+Launch a linux EC2 instance using free tier only. Now SSH to EC2 instance
 
 ### Download
 sudo wget `http url to the version which is to be downloaded`
