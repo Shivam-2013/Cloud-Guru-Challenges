@@ -1,4 +1,4 @@
-# Cloud-Guru-Challenges
+# Cloud-Challenges
 ## Step1-  Python code for data manuplation 
 
 **TRANSFORMATION**. Perform data manipulations in Python code. 
